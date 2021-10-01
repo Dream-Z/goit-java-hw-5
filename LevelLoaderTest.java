@@ -1,6 +1,6 @@
 package com.company.module5.task29;
 
-class LevelLoaderTest {
+public class LevelLoaderTest {
   public static void main(String[] args) {
     //Level loaded
     try {
@@ -16,4 +16,17 @@ class LevelLoaderTest {
       System.out.println("Level too big");
     }
   }
+}
+
+class LevelLoader {
+  public void load(Level level) throws LevelTooBigException {
+    if ((level.getHeight() * level.getWidth()) > 100000){
+      throw new LevelTooBigException();
+    }
+    System.out.println("Level loaded");
+  }
+}
+
+class LevelTooBigException extends Exception {
+
 }
