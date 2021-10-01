@@ -1,6 +1,6 @@
 package com.company.module5.task29;
 
-public class Level {
+class Level {
   private int width;
   private int height;
 
