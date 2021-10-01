@@ -1,20 +1,4 @@
-public class LevelLoaderTest {
-  public static void main(String[] args) {
-    //Level loaded
-    try {
-      new LevelLoader().load(new Level(10, 20));
-    } catch (LevelTooBigException ex) {
-      System.out.println("Level too big");
-    }
-
-    //Level too big
-    try {
-      new LevelLoader().load(new Level(10000, 2000));
-    } catch (LevelTooBigException ex) {
-      System.out.println("Level too big");
-    }
-  }
-}
+package com.company.module5.task29;
 
 class Level {
   private int width;
@@ -40,6 +24,24 @@ class LevelLoader {
       throw new LevelTooBigException();
     }
     System.out.println("Level loaded");
+  }
+}
+
+public class LevelLoaderTest {
+  public static void main(String[] args) {
+    //Level loaded
+    try {
+      new LevelLoader().load(new Level(10, 20));
+    } catch (LevelTooBigException ex) {
+      System.out.println("Level too big");
+    }
+
+    //Level too big
+    try {
+      new LevelLoader().load(new Level(10000, 2000));
+    } catch (LevelTooBigException ex) {
+      System.out.println("Level too big");
+    }
   }
 }
 
