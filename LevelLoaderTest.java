@@ -1,5 +1,3 @@
-package com.company.module5.task29;
-
 class LevelLoader {
   public void load(Level level) throws LevelTooBigException {
     if ((level.getHeight() * level.getWidth()) > 100000){
