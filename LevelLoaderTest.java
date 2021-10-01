@@ -1,5 +1,3 @@
-package com.company.module5.task29;
-
 public class LevelLoaderTest {
   public static void main(String[] args) {
     //Level loaded
@@ -15,6 +13,24 @@ public class LevelLoaderTest {
     } catch (LevelTooBigException ex) {
       System.out.println("Level too big");
     }
+  }
+}
+
+class Level {
+  private int width;
+  private int height;
+
+  public Level(int width, int height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  public int getWidth() {
+    return width;
+  }
+
+  public int getHeight() {
+    return height;
   }
 }
 
