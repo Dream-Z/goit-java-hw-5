@@ -1,0 +1,3 @@
+class LevelTooBigException extends Exception {
+
+}
